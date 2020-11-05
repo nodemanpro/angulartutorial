@@ -1,0 +1,33 @@
+
+<div class="container" fxLayout="column" fxLayout.xs="row"   fxLayoutWrap fxLayoutAlign="center center" >
+    <div style="color: rgb(46, 46, 248);"><h2>TEST CODE</h2></div>
+    <form [formGroup]="registerform" (ngSubmit)="register()" class="example-form" >
+  
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>First name</mat-label>
+            <input matInput formControlName="firstname" name="firstname" >
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastname" name="lastname">
+          </mat-form-field></td>
+        </tr></table>
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width" >
+            <mat-label>City</mat-label>
+            <input matInput formControlName="city" name="city">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Phone</mat-label>
+            <input matInput  type="number" formControlName="phone" name="phone">
+          </mat-form-field></td>
+        </tr></table>
+        <button mat-flat-button color="primary"  type="submit" class="submitbtn" [disabled]="!registerform.valid">Submit</button>
+
+      </form>
+     
+</div>
+<div style="padding: 50px;">
+    <app-formdatatable></app-formdatatable>
+</div>
